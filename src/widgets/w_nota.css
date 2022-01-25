@@ -1,0 +1,190 @@
+.w_nota {
+    position: absolute;
+    width: 500px;
+    height: 300px;
+    background-color: rgb(122, 122, 122);
+    border-radius: 6px 6px 10px 10px;
+    box-shadow: 2px 2px 8px grey;
+}
+
+#title {
+    height: 15px;
+    width: 80%;
+    text-align: left;
+    padding: 10px 0;
+    padding-left: 10px;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+}
+
+.w_nota #container {
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 35px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-stretch: condensed;
+    border-radius: 20px 0px 30px 6px;
+    overflow: hidden;
+
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: auto 60%;
+    grid-template-rows: auto 40px;
+}
+
+#descr {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+#fecha {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+#img_nota {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    width: 100%;
+}
+
+.trash {
+    float: right;
+    width: 20px;
+    height: 25px;
+    cursor: pointer;
+    position: relative;
+}
+
+.trash img {
+    position: relative;
+    width: 22px;
+    height: 22px;
+    top: 8px;
+    left: 0px;
+}
+
+.dragger {
+    float: right;
+    width: 35px;
+    height: 30px;
+    cursor: move;
+}
+
+.dragger img {
+    position: relative;
+    width: 30px;
+    height: 20px;
+    top: 8px;
+    left: 2px;
+}
+
+.color {
+    position: relative;
+    float: right;
+    overflow: hidden;
+    width: 40px;
+    height: 30px;
+}
+
+.color img {
+    position: relative;
+    width: 32px;
+    height: 30px;
+    top: 3px;
+    left: 8px;
+}
+
+.color input[type=color] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    height: 100%;
+    cursor: pointer;
+}
+
+#entrada_n {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-content: center;
+    justify-content: center;
+    display: none;
+    flex-wrap: wrap;
+}
+
+#box_nota {
+    background-color: rgb(235, 235, 235);
+    width: 500px;
+    height: 500px;
+    display: grid;
+    padding: 10px;
+    grid-gap: 10px;
+    grid-template-columns: auto auto;
+    grid-template-rows: 40px 40px auto 40px;
+}
+
+#study_id {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+#busca_nota {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+#lista_notas {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+#nota_result {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+#img_prev {
+    width: auto;
+    height: 200px;
+}
+
+#cancel_n {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+#accept_n {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}

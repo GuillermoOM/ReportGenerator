@@ -1,0 +1,37 @@
+<div class="w_nota" style="position:absolute"
+    onmouseout="
+$(this).draggable({handle: $(this).children('.dragger'), grid: [ 10, 10 ], containment: $(this).parent().parent()});
+$(this).resizable({'grid': 10, containment: $(this).parent().parent(), minHeight: 100, minWidth: 250, handles: 'w, s, e'});">
+    <div class="dragger" onmousedown="$(this).parent().css({'z-index':'2'});"
+        onmouseup="$(this).parent().css({'z-index':'1'});">
+        <img src="widgets/draggable.png" />
+    </div>
+    <div class="color">
+        <img src="widgets/color.png" />
+        <input type='color' oninput="ccolor(this)" />
+    </div>
+    <div class="trash" onclick="$(this).parent().parent().remove();">
+        <img src="widgets/trash.png" />
+    </div>
+    <div id="title">Nombre</div>
+    <div class="container" id="container" onclick="nota(this)">
+        <div id="descr">Click para elegir nota</div>
+        <div id="fecha"></div>
+        <img id="img_nota" src="#" alt="">
+    </div>
+    <div id="entrada_n">
+        <div id="box_nota">
+            <input type="text" id="study_id" value="Id de Estudio">
+            <button id="busca_nota" onclick="busca_n(this)">Buscar</button>
+            <select id="lista_notas" onchange="carga_nota(this)"></select>
+            <div id="nota_result">
+                <p id="nom" style="display:none"></p>
+                <p id="text_prev"></p>
+                <p id="fecha_prev"></p>
+                <img src="#" alt="" id="img_prev">
+            </div>
+            <button id="cancel_n" onclick="cancelar_n(this)">Cancelar</button>
+            <button id="accept_n" onclick="aceptar_n(this)">Aceptar</button>
+        </div>
+    </div>
+</div>

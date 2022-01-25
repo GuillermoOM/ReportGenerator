@@ -1,0 +1,23 @@
+<div class="w_imagen" style="position:absolute" onmouseout="
+$(this).resizable({'grid': 10, containment: $(this).parent().parent(), minHeight: 100, minWidth: 250, handles: 'w, s, e'});
+$(this).draggable({handle: $(this).children('.dragger'), grid: [ 10, 10 ], containment: $(this).parent().parent()});"
+    onmousedown="$(this).css({'z-index':'2'});" onmouseup="$(this).css({'z-index':'1'});">
+    <div class="dragger">
+        <img src="widgets/draggable.png" />
+    </div>
+    <div class="color">
+        <img src="widgets/color.png" />
+        <input type='color' oninput="ccolor(this)" />
+    </div>
+    <div class="trash" onclick="$(this).parent().parent().remove();">
+        <img src="widgets/trash.png" />
+    </div>
+    <div id="title" onclick="cambio(this)">Titulo</div>
+    <div class="container" id="container">
+        <div class="upload-btn-wrapper" id="wrap">
+            <button class="ima" id="up" style="background-color: rgb(52, 65, 105);">Abrir</button>
+            <img id="imagen" src="#" alt=""/>
+            <input type="file" accept="image/*" onchange="load_img(event)" />
+        </div>
+    </div>
+</div>

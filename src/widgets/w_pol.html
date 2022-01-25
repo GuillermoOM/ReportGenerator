@@ -1,0 +1,19 @@
+<div class="w_pol" style="position:absolute" onmouseout="
+$(this).draggable({handle: $(this).children('.dragger'), grid: [ 10, 10 ], containment: $(this).parent().parent()});">
+    <div class="dragger" onmousedown="$(this).parent().css({'z-index':'2'});"
+        onmouseup="$(this).parent().css({'z-index':'1'});">
+        <img src="widgets/draggable.png" />
+    </div>
+    <div class="color">
+        <img src="widgets/color.png" />
+        <input type='color' oninput="ccolor(this)" />
+    </div>
+    <div class="trash" onclick="$(this).parent().parent().remove();">
+        <img src="widgets/trash.png" />
+    </div>
+    <div id="title">Datos del polígono</div>
+    <div class="container" id="container">
+        <p id="t_pol" onclick="tam(this)">0.00 ha</p>
+        <p id="coord" onclick="coo(this)">Coordenadas: 0, 0</p>
+    </div>
+</div>

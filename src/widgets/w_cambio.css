@@ -1,0 +1,112 @@
+.w_cambio {
+    position: absolute;
+    width: 280px;
+    height: 120px;
+    background-color: rgb(122, 122, 122);
+    border-radius: 6px 6px 10px 10px;
+    box-shadow: 2px 2px 8px grey;
+}
+
+#title {
+    height: 15px;
+    width: 80%;
+    text-align: left;
+    padding: 10px 0;
+    padding-left: 10px;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+}
+
+.w_cambio #container {
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 35px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-top: 5px;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 20px 0px 30px 6px;
+    overflow: visible;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#t_block {
+    cursor: pointer;
+    height: 40px;
+    display: flex;
+    color: green;
+}
+
+#porc {
+    margin-top: 3px;
+    font-size: 30px;
+    font-weight: bolder;
+    font-stretch: ultra-condensed;
+}
+
+#long {
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.trash {
+    float: right;
+    width: 20px;
+    height: 25px;
+    cursor: pointer;
+    position: relative;
+}
+
+.trash img {
+    position: relative;
+    width: 22px;
+    height: 22px;
+    top: 8px;
+    left: 0px;
+}
+
+.dragger {
+    float: right;
+    width: 35px;
+    height: 30px;
+    cursor: move;
+}
+
+.dragger img {
+    position: relative;
+    width: 30px;
+    height: 20px;
+    top: 8px;
+    left: 2px;
+}
+
+.color {
+    position: relative;
+    float: right;
+    overflow: hidden;
+    width: 40px;
+    height: 30px;
+}
+
+.color img {
+    position: relative;
+    width: 32px;
+    height: 30px;
+    top: 3px;
+    left: 8px;
+}
+
+.color input[type=color] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    height: 100%;
+    cursor: pointer;
+}

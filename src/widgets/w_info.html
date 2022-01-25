@@ -1,0 +1,21 @@
+<div class="w_info" style="position:absolute" onmouseout="
+$(this).draggable({handle: $(this).children('.dragger'), grid: [ 10, 10 ], containment: $(this).parent().parent()});
+$(this).resizable({'grid': 10, containment: $(this).parent().parent(), minHeight: 100, minWidth: 250, handles: 's, w, e'});">
+    <div class="dragger" onmousedown="$(this).parent().css({'z-index':'2'});"
+        onmouseup="$(this).parent().css({'z-index':'1'});">
+        <img src="widgets/draggable.png" />
+    </div>
+    <div class="color">
+        <img src="widgets/color.png" />
+        <input type='color' oninput="ccolor(this)" />
+    </div>
+    <div class="trash" onclick="$(this).parent().parent().remove();">
+        <img src="widgets/trash.png" />
+    </div>
+    <div id="title">Información del estudio</div>
+    <div class="container" id="container">
+        <p id="fecha" onclick="fec(this)">Fecha: <span style="font-size: 20px"></span> </p>
+        <p class="zon" id="zona" style="font-size: 20px; font-weight:600;" onclick="zon(this)">Zona: </p>
+        <p class="zon" id="subzona" style="margin-top: -16px;" onclick="subzon(this)">Subzona: </p>
+    </div>
+</div>

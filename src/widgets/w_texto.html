@@ -1,0 +1,25 @@
+<div class="w_texto" style="position:absolute"
+    onmouseout="
+$(this).draggable({handle: $(this).children('.dragger'), grid: [ 10, 10 ], containment: $(this).parent().parent()});
+$(this).resizable({'grid': 10, containment: $(this).parent().parent(), minHeight: 100, minWidth: 250, handles: 'w, s, e'});">
+    <div class="dragger" onmousedown="$(this).parent().css({'z-index':'2'});"
+        onmouseup="$(this).parent().css({'z-index':'1'});">
+        <img src="widgets/draggable.png" />
+    </div>
+    <div class="color">
+        <img src="widgets/color.png" />
+        <input type='color' oninput="ccolor(this)" />
+    </div>
+    <div class="trash" onclick="$(this).parent().parent().remove();">
+        <img src="widgets/trash.png" />
+    </div>
+    <div id="title" onclick="cambio(this)">Titulo</div>
+    <div class="container" id="container" onclick="texto(this)"> </div>
+    <div id="entrada">
+        <div id="entrada_box">
+            <textarea id="input_box" cols="30" rows="10"></textarea>
+            <button id="cancel" onclick="can(this)">Cancelar</button>
+            <button id="enter" onclick="acc(this)">Aceptar</button>
+        </div>
+    </div>
+</div>

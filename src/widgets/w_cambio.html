@@ -1,0 +1,32 @@
+<div class="w_cambio" style="position:absolute" onmouseout="
+$(this).draggable({handle: $(this).children('.dragger'), grid: [ 10, 10 ], containment: $(this).parent().parent()});
+$(this).resizable({'grid': 10, containment: $(this).parent().parent(), minHeight: 100, minWidth: 250, handles: 'w, e'});">
+    <div class="dragger" onmousedown="$(this).parent().css({'z-index':'2'});"
+        onmouseup="$(this).parent().css({'z-index':'1'});">
+        <img src="widgets/draggable.png" />
+    </div>
+    <div class="color">
+        <img src="widgets/color.png" />
+        <input type='color' oninput="ccolor(this)" />
+    </div>
+    <div class="trash" onclick="$(this).parent().parent().remove();">
+        <img src="widgets/trash.png" />
+    </div>
+    <div id="title" onclick="cambio(this)">Titulo</div>
+    <div class="container" id="container">
+        <div>
+            <div id="t_block" onclick="cambio_t(this)">
+                <svg xmlns="http://www.w3.org/2000/svg" onclick="cambio_t(this)" direccion="green" style="margin-right: 40px" width="40" height="40" viewBox="0 0 24 24">
+                    <path d="M16 18l2.29-2.29-4.88-4.88-4 4L2 7.41 3.41 6l6 6 4-4 6.3 6.29L22 12v6z" fill="green" />
+                    <path d="M0 0h24v24H0z" fill="none" />
+                </svg>
+                <p id="porc">00.00%</p>
+            </div>
+            <div id="long" onclick="cambio_l(this)">
+                <span id="l_ini">0 m</span>
+                <span style="margin-left: 10px; margin-right: 10px;"> >>> </span>
+                <span id="l_fin">0 m</span>
+            </div>
+        </div>
+    </div>
+</div>

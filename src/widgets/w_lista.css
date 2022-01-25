@@ -1,0 +1,143 @@
+.w_lista {
+    position: absolute;
+    width: 280px;
+    height: 110px;
+    background-color: rgb(122, 122, 122);
+    border-radius: 6px 6px 10px 10px;
+    box-shadow: 2px 2px 8px grey;
+    font-family: 'Roboto', sans-serif;
+}
+
+#title {
+    height: 15px;
+    width: 80%;
+    text-align: left;
+    padding: 10px 0;
+    padding-left: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+}
+
+.w_lista #container {
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    min-height: 70px;
+    top: 35px;
+    left: 0;
+    right: 0;
+    padding-top: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 20px 0px 30px 6px;
+    display: block;
+    justify-content: left;
+}
+
+.w_lista hr {
+    border: 1px solid rgb(197, 197, 197);
+}
+
+.trash {
+    float: right;
+    width: 20px;
+    height: 25px;
+    cursor: pointer;
+    position: relative;
+}
+
+.trash img {
+    position: relative;
+    width: 22px;
+    height: 22px;
+    top: 8px;
+    left: 0px;
+}
+
+.dragger {
+    float: right;
+    width: 35px;
+    height: 30px;
+    cursor: move;
+}
+
+.dragger img {
+    position: relative;
+    width: 30px;
+    height: 20px;
+    top: 8px;
+    left: 2px;
+}
+
+.color {
+    position: relative;
+    float: right;
+    overflow: hidden;
+    width: 40px;
+    height: 30px;
+}
+
+.color img {
+    position: relative;
+    width: 32px;
+    height: 30px;
+    top: 3px;
+    left: 8px;
+}
+
+.color input[type=color] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    height: 100%;
+    cursor: pointer;
+}
+
+#t_pol {
+    margin-top: 10px;
+    font-size: 30px;
+    font-weight: bolder;
+    font-stretch: ultra-condensed;
+}
+
+#coord {
+    margin-top: -25px;
+    font-weight: 500;
+    font-size: 13px;
+    font-stretch: condensed;
+}
+
+li {
+    margin-left: -30px;
+    list-style: none;
+    margin-bottom: 5px;
+}
+
+hr {
+    margin-top: 5px;
+    margin-right: 10px;
+    margin-left: -30px;
+}
+
+.menos {
+    cursor: pointer;
+    width: 20px;
+    position: relative;
+    float: right;
+    top: 5px;
+    font-size: 25px;
+    font-weight: bolder;
+    left: 2px;
+}
+
+.mas {
+    cursor: pointer;
+    width: 20px;
+    position: relative;
+    float: right;
+    top: 5px;
+    font-size: 25px;
+    font-weight: bolder;
+}

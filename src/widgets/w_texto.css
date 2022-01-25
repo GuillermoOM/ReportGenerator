@@ -1,0 +1,140 @@
+    .w_texto {
+        position: absolute;
+        width: 500px;
+        height: 300px;
+        background-color: rgb(122, 122, 122);
+        border-radius: 6px 6px 10px 10px;
+        box-shadow: 2px 2px 8px grey;
+    }
+
+    #title {
+        height: 15px;
+        width: 80%;
+        text-align: left;
+        padding: 10px 0;
+        padding-left: 10px;
+        font-size: 15px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 600;
+        color: white;
+        cursor: pointer;
+    }
+
+    .w_texto #container {
+        background-color: rgb(255, 255, 255);
+        position: absolute;
+        top: 35px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding-top: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 15px;
+        font-stretch: condensed;
+        border-radius: 20px 0px 30px 6px;
+        overflow: hidden;
+    }
+
+    .trash {
+        float: right;
+        width: 20px;
+        height: 25px;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .trash img {
+        position: relative;
+        width: 22px;
+        height: 22px;
+        top: 8px;
+        left: 0px;
+    }
+
+    .dragger {
+        float: right;
+        width: 35px;
+        height: 30px;
+        cursor: move;
+    }
+
+    .dragger img {
+        position: relative;
+        width: 30px;
+        height: 20px;
+        top: 8px;
+        left: 2px;
+    }
+
+    .color {
+        position: relative;
+        float: right;
+        overflow: hidden;
+        width: 40px;
+        height: 30px;
+    }
+
+    .color img {
+        position: relative;
+        width: 32px;
+        height: 30px;
+        top: 3px;
+        left: 8px;
+    }
+
+    .color input[type=color] {
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        height: 100%;
+        cursor: pointer;
+    }
+
+    #entrada {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        align-content: center;
+        justify-content: center;
+        display: none;
+        flex-wrap: wrap;
+    }
+
+    #entrada_box {
+        background-color: rgb(235, 235, 235);
+        width: 500px;
+        height: 400px;
+        display: grid;
+        padding: 10px;
+        grid-gap: 10px;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto 40px;
+    }
+
+    #input_box {
+        resize: none;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+
+    #cancel {
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+
+    #enter {
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reporter</title>
+
+  <script>window.$ = window.jQuery = require("./scripts/jquery-1.12.4.js");</script>
+  <script src="scripts/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="css/jquery-ui.min.css">
+
+  <script src='scripts/spectrum.js'></script>
+  <link rel='stylesheet' href='css/spectrum.css' />
+
+  <!-- WIDGETS -->
+  <link rel="stylesheet" href="css/roboto.css">
+
+  <script src="widgets/pagina.js"></script>
+  <link rel="stylesheet" href="widgets/pagina.css">
+
+  <script src="widgets/w_texto.js"></script>
+  <link rel="stylesheet" href="widgets/w_texto.css">
+
+  <script src="widgets/w_imagen.js"></script>
+  <link rel="stylesheet" href="widgets/w_imagen.css">
+
+  <script src="widgets/w_pol.js"></script>
+  <link rel="stylesheet" href="widgets/w_pol.css">
+
+  <script src="widgets/w_lista.js"></script>
+  <link rel="stylesheet" href="widgets/w_lista.css">
+
+  <script src="widgets/w_nota.js"></script>
+  <link rel="stylesheet" href="widgets/w_nota.css">
+
+  <script src="widgets/w_info.js"></script>
+  <link rel="stylesheet" href="widgets/w_info.css">
+
+  <script src="widgets/w_cambio.js"></script>
+  <link rel="stylesheet" href="widgets/w_cambio.css">
+
+  <!-- MAIN -->
+  <script src="scripts/main.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+
+  <!-- ////////////////////////////////////////////////////////////////////////////////////////////
+      //PARA AGREGAR UN NUEVO WIDGET:                                                            //
+      // 1. crear archivos html, js, css en carpeta widgets                                      //
+      // 2. agregar js y css con <script> y <link> en <head>                                     //
+      // 3. agregar boton en sidenav con atributo modulo con nombre del archivo html del widget  //
+      // 4. agregar en for para json de funcion guardarT()                                       //
+      // 5. agregar en primer else para obtener datos json de funcion batch()                    //
+      ///////////////////////////////////////////////////////////////////////////////////////////// -->
+</head>
+
+<body style="overflow: scroll; background-color: rgb(177, 177, 177);">
+  <input style="display: none;" type="file" accept="application/json,.json" id="cargajson">
+  <input style="display: none;" type="file" accept="text/html" id="cargahtml">
+  <input style="display: none;" type="file" accept="image/*" id="cargaimg">
+  <input style="display: none;" type='color' id="color_fondo"/>
+  <div id="prog">
+    <p>Trabajando...</p>
+  </div>
+  <div id="menu">
+    <button class="menb" onclick="nuevo()">Nuevo</button>
+    <button class="menb" onclick="abrirR()">Abrir Reporte</button>
+    <button class="menb" onclick="guardarR()">Guardar Reporte</button>
+    <button class="menb" onclick="abrirT()">Abrir Template</button>
+    <button class="menb" onclick="guardarT()">Guardar Template</button>
+    <button class="menb" onclick="exportarPDF()">Exportar PDF</button>
+    <button class="menb" onclick="batch()">Batch</button>
+  </div>
+  <div class="sidenav">
+    <button class="buta" onclick="Padd()" style="background-color: rgb(87, 131, 46)">Agregar Página</button>
+    <button class="buta" onclick="Prem()" style="background-color: rgb(146, 54, 54)">Quitar Página</button>
+    <button class="buta" onclick="cargaimg()" style="background-color: rgb(73, 73, 73)">Cambiar Logo</button>
+    <button class="buta" onclick="fcolor()" style="background-color: rgb(73, 73, 73)">Color Fondo Logo</button>
+    <button class="buta" modulo="w_imagen">Imagen</button>
+    <button class="buta" modulo="w_texto">Texto</button>
+    <button class="buta" modulo="w_pol">Tamaño Poligono</button>
+    <button class="buta" modulo="w_info">Info Estudio</button>
+    <button class="buta" modulo="w_lista">Lista</button>
+    <button class="buta" modulo="w_nota">Nota</button>
+    <button class="buta" modulo="w_cambio">Cambios</button>
+  </div>
+  <div class="content" id="cont"></div>
+</body>
+
+</html>
